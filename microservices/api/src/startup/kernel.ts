@@ -11,7 +11,6 @@ import { XAuthBundle } from "@bluelibs/x-auth-bundle";
 import { GraphQLBundle } from "@bluelibs/graphql-bundle";
 import { EmailBundle } from "@bluelibs/email-bundle";
 import { ValidatorBundle } from "@bluelibs/validator-bundle";
-import { UsersCollection } from "../bundles/AppBundle/collections";
 
 import env from "./env";
 
@@ -35,7 +34,7 @@ export const kernel = new Kernel({
     }),
     new SecurityBundle(),
     new SecurityMongoBundle({
-      usersCollection: UsersCollection,
+      // usersCollection: UsersCollection,
     }),
     new ApolloSecurityBundle(),
     new XBundle({
